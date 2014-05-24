@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-pivotal-tracker"
-  spec.version       = "0.0.1"
+  spec.version       = "0.1.0"
   spec.authors       = ["Marty Trzpit"]
   spec.email         = ["mtrizzy@gmail.com"]
   spec.description   = %q(Lita handler for adding stories to Pivotal Tracker.)
@@ -15,7 +15,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "lita", ">= 3.2"
-  spec.add_runtime_dependency "lita-keyword-arguments"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"

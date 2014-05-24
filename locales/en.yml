@@ -2,3 +2,7 @@ en:
   lita:
     handlers:
       pivotal_tracker:
+        help:
+          add:
+            syntax: (pt|pivotaltracker) add [feature | bug | chore] <name> to <project>
+            desc: Add a feature (default), bug, or chore to Pivotal Tracker with the <name> specified to <project>.

@@ -1,6 +1,10 @@
 # lita-pivotal-tracker
 
-Lita handler for adding Pivotal Tracker stories.
+[![Build Status](https://travis-ci.org/martytrzpit/lita-pivotal-tracker.png?branch=master)](https://travis-ci.org/martytrzpit/lita-pivotal-tracker)
+[![Code Climate](https://codeclimate.com/github/martytrzpit/lita-pivotal-tracker.png)](https://codeclimate.com/github/martytrzpit/lita-pivotal-tracker)
+[![Coverage Status](https://coveralls.io/repos/martytrzpit/lita-pivotal-tracker/badge.png)](https://coveralls.io/r/martytrzpit/lita-pivotal-tracker)
+
+**lita-pivotal-tracker** is a handler plugin for [Lita](https://www.lita.io/) that manages [Pivotal Tracker](https://www.pivotaltracker.com/) stories.
 
 ## Installation
 
@@ -16,26 +20,13 @@ config.handlers.pivotal_tracker.token = `YOUR_PIVOTAL_TRACKER_TOKEN`
 
 ## Usage
 
-`pt add <arguments>`
-
-### Arguments
-
-* `[-p | --project PROJECT_NAME]` - The name of the Project
-* `[-n | --name STORY_NAME]` - The Story's name
-* `[-d | --description STORY_DESCRIPTION]` - The Story's description
-* `[-e | --estimate STORY_ESTIMATE]` - Story estimate
-* `[-t | --type STORY_TYPE]` - Story type. Defaults to 'feature'
+`(pt|pivotaltracker) add [feature (default) | bug | chore] <name> to <project>`
 
 ### Examples
 
-`lita pt add -p 'Death Star' -n 'Exhaust ports are ray shielded'` will add a Feature named "Exhaust ports are ray shielded" to the "Death Star" project.
+`lita pt add Exhaust ports are ray shielded to Death Star` will add a __Feature__ named _Exhaust ports are ray shielded_ to the _Death Star_ project.
 
-`lita pt add -t bug -p 'Death Star' -n 'Explosive chain reaction in exhaust ports' -d 'Did we really design it like this?!?'` will add a Bug named "Explosive chain reaction in exhaust ports" with description "Did we really design it like this?!?" to the "Death Star" project.
-
-## TODO
-1. Story owner
-2. Story requester
-3. Story labels
+`lita pt add bug Explosive chain reaction in exhaust ports to Death Star` will add a __Bug__ named _Explosive chain reaction in exhaust ports_ to the _Death Star_ project.
 
 ## License
 
